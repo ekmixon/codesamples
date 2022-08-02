@@ -8,7 +8,7 @@ task_id = "TASK_ID"
 action = "tasks/{0}/complete.json".format(task_id)
 
 url = "https://{0}.teamwork.com/{1}".format(company, action)
-headers = urllib3.util.make_headers(basic_auth=key + ":xxx")
+headers = urllib3.util.make_headers(basic_auth=f"{key}:xxx")
 request = http.request('PUT', url, headers=headers)
 
 response = request.status

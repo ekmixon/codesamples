@@ -7,7 +7,7 @@ key = "YOUR_API_KEY"
 action = "projects.json"
 
 url = "https://{0}.teamwork.com/{1}".format(company, action)
-headers = urllib3.util.make_headers(basic_auth=key + ":xxx")
+headers = urllib3.util.make_headers(basic_auth=f"{key}:xxx")
 request = http.request('GET', url, headers=headers)
 
 response = request.status
